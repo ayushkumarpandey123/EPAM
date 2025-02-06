@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Example</title>
+</head>
+<body>
+    <h1>JavaScript Switch Statement Example</h1>
+
+    <script>
+        let myAnswer; // Declare variable for storing the result
+
+        switch (true) {
+            case 10 > 20:
+                myAnswer = "red color";
+                break;
+            case 20 < 30:
+                myAnswer = "green color";
+                break;
+            case 50 > 20:
+                myAnswer = "black color";
+                break;
+            case 100 == 200:
+                myAnswer = "orange color";
+                break;
+            default:
+                myAnswer = "None of the above";
+                break;
+        }
+
+        document.write(myAnswer); // Display the result
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm, Prompt & Document Write Example</title>
+</head>
+<body>
+    <script>
+        // Confirm Box
+        var women = confirm("Are You a Woman?");
+
+        if (women) {
+            // Prompt Box for Women
+            let name = prompt("Please Enter Your Name:");
+            document.write("Hello Madam " + name + ", Welcome to My Page");
+        } else {
+            // Prompt Box for Men
+            let name = prompt("Please Enter Your Name:");
+            document.write("Hello Mr. " + name + ", Welcome to My Page");
+        }
+    </script>
+</body>
+</html>
