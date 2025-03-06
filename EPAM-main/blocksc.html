@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block Scope Example</title>
+</head>
+<body>
+    <script>
+        function sports() {
+            if (10 < 20) {
+                let cricket = "virat";
+                document.write(cricket + "<br>"); // This will work
+            }
+            document.write(cricket); // This will cause an error since `cricket` is block-scoped
+        }
+        sports();
+    </script>
+</body>
+</html>

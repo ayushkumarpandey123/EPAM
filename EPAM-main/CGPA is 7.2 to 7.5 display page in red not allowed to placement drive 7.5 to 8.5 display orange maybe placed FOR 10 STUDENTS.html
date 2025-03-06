@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Drive Eligibility</title>
+    <style>
+        /* General page styling */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        /* Container for students' details */
+        .students-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .student {
+            width: 250px;
+            padding: 20px;
+            margin: 15px;
+            border-radius: 8px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        /* Color classes based on CGPA ranges */
+        .red {
+            background-color: red;
+        }
+
+        .orange {
+            background-color: orange;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        /* Hover effect */
+        .student:hover {
+            transform: scale(1.05);
+        }
+
+        .message {
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Placement Drive Eligibility Check</h1>
+
+    <div class="students-container">
+        <!-- Student 1 -->
+        <div class="student red">
+            <p>Student 1: CGPA = 7.3</p>
+            <div class="message">Not allowed for Placement Drive</div>
+        </div>
+
+        <!-- Student 2 -->
+        <div class="student red">
+            <p>Student 2: CGPA = 7.4</p>
+            <div class="message">Not allowed for Placement Drive</div>
+        </div>
+
+        <!-- Student 3 -->
+        <div class="student orange">
+            <p>Student 3: CGPA = 8.0</p>
+            <div class="message">Maybe placed in Placement Drive</div>
+        </div>
+
+        <!-- Student 4 -->
+        <div class="student red">
+            <p>Student 4: CGPA = 7.1</p>
+            <div class="message">Not allowed for Placement Drive</div>
+        </div>
+
+        <!-- Student 5 -->
+        <div class="student orange">
+            <p>Student 5: CGPA = 8.2</p>
+            <div class="message">Maybe placed in Placement Drive</div>
+        </div>
+
+        <!-- Student 6 -->
+        <div class="student green">
+            <p>Student 6: CGPA = 8.7</p>
+            <div class="message">Eligible for Placement Drive</div>
+        </div>
+
+        <!-- Student 7 -->
+        <div class="student orange">
+            <p>Student 7: CGPA = 8.4</p>
+            <div class="message">Maybe placed in Placement Drive</div>
+        </div>
+
+        <!-- Student 8 -->
+        <div class="student red">
+            <p>Student 8: CGPA = 7.0</p>
+            <div class="message">Not allowed for Placement Drive</div>
+        </div>
+
+        <!-- Student 9 -->
+        <div class="student green">
+            <p>Student 9: CGPA = 9.0</p>
+            <div class="message">Eligible for Placement Drive</div>
+        </div>
+
+        <!-- Student 10 -->
+        <div class="student orange">
+            <p>Student 10: CGPA = 8.3</p>
+            <div class="message">Maybe placed in Placement Drive</div>
+        </div>
+    </div>
+
+</body>
+</html>

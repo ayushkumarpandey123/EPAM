@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Example</title>
+</head>
+<body>
+    <h1>JavaScript Object Example</h1>
+
+    <script>
+        // Creating an object
+        let person = {
+            name: "John",
+            age: 25,
+            city: "New York"
+        };
+
+        // Accessing properties
+        console.log(person.name); // Output: John
+
+        // Modifying properties
+        person.age = 26;
+        console.log(person.age); // Output: 26
+
+        // Adding a new property
+        person.country = "USA";
+        console.log(person); // Output: { name: "John", age: 26, city: "New York", country: "USA" }
+
+        // Looping through an object
+        for (let key in person) {
+            console.log(`${key}: ${person[key]}`);
+        }
+
+        // Checking if a property exists
+        console.log("city" in person); // Output: true
+    </script>
+</body>
+</html>

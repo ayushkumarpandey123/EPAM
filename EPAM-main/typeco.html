@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typeof and Type Conversion Example</title>
+</head>
+<body>
+    <h1>JavaScript Typeof and Type Conversion</h1>
+
+    <script>
+        var a = "99"; // a is a string
+        var b = 99;   // b is a number
+
+        document.write(typeof(a)); // Output: string
+        document.write("<br><br>");
+        document.write(typeof(b)); // Output: number
+
+        var c = parseInt(a); // Convert string to number
+        document.write("<br><br>");
+        document.write(typeof(c)); // Output: number
+
+        document.write("<br><br>");
+        var d = String(b); // Convert number to string
+        document.write(typeof(d)); // Output: string
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Payslip Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        input[type="number"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        .result {
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Employee Payslip Calculator</h1>
+
+    <form id="payslipForm">
+        <label for="daysPresent">Number of Days Present:</label>
+        <input type="number" id="daysPresent" required><br>
+
+        <label for="roomType">Room Type (0 for home, 0.2 for room, 0.3 for hostel):</label>
+        <input type="number" step="0.1" id="roomType" required><br>
+
+        <input type="submit" value="Calculate Payslip">
+    </form>
+
+    <div class="result" id="result"></div>
+
+    <script>
+        document.getElementById('payslipForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Basic Pay and constants
+            const basicPay = 37900;
+            const totalDays = 30;
+            const dnsPercentage = 0.09;
+
+            // Get user input
+            const daysPresent = parseInt(document.getElementById('daysPresent').value);
+            const roomType = parseFloat(document.getElementById('roomType').value);
+
+            // Validation
+            if (daysPresent < 0 || daysPresent > totalDays || isNaN(roomType)) {
+                alert("Please enter valid values.");
+                return;
+            }
+
+            // Calculate pay
+            const dailyPay = basicPay / totalDays;
+            const earnedAmount = dailyPay * daysPresent;
+            const dns = basicPay * dnsPercentage;
+
+            // Calculate HRA based on room type
+            const hra = basicPay * roomType;
+
+            // Display the result
+            const result = `
+                <h2>Payslip</h2>
+                <p>Basic Pay: ₹${basicPay}</p>
+                <p>Days Present: ${daysPresent}</p>
+                <p>Amount Earned: ₹${earnedAmount}</p>
+                <p>DNS (9% of Basic): ₹${dns}</p>
+                <p>HRA (Room Type: ${roomType}): ₹${hra}</p>
+                <p><strong>Total Salary: ₹${earnedAmount - dns + hra}</strong></p>
+            `;
+            document.getElementById('result').innerHTML = result;
+        });
+    </script>
+
+</body>
+</html>
